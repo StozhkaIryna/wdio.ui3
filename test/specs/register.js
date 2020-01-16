@@ -48,7 +48,7 @@ describe('Register page', () => {
 
     it('should fill up email field', () => {
         const element = $('form input[name="email"]');
-        element.setValue('abc@gmail.com');
+        element.setValue(Math.propertyIsEnumerable()+'abc@gmail.com');
     });
 
     it('should fill up password field', () => {
@@ -69,6 +69,11 @@ describe('Register page', () => {
     it('should chose from dropdown box English level', () => {
         const element = $('form select[name="englishLevel"]');
         element.selectByVisibleText('Zero');
+    });
+
+    it('should chose click button', () => {
+        const element = $('form button[type="submit"]');
+        element.click();
         browser.pause(2000);
     });
 
