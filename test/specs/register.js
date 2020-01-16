@@ -4,6 +4,7 @@ const { expect } = require('chai');
 
 const firstName = 'Test';
 const lastName = 'Testovich';
+const phoneNum = '19994442211';
 const email = 'testit10times@gmail.com';
 const password = 'testIT10times';
 
@@ -36,29 +37,31 @@ describe('Register page', () => {
         expect(actual).equal(expected);
     });
 
+    //TO CREATE A NEW USER
+
     it('should fill up first Name field', () => {
         const element = $('form input[name="firstName"]');
-        element.setValue('Test');
+        element.setValue('firstName');
     });
 
     it('should fill up last Name field', () => {
         const element = $('form input[name="lastName"]');
-        element.setValue('Testovich');
+        element.setValue('lastName');
     });
 
-    it('should fill up phone num field', () => {
-        const element = $('form input[name="phone"]');
-        element.setValue('19994442211');
+    it('should fill up phoneNum field', () => {
+        const element = $('form input[name="phoneNum"]');
+        element.setValue('phoneNum');
     });
 
     it('should fill up email field', () => {
         const element = $('form input[name="email"]');
-        element.setValue(Math.propertyIsEnumerable()+'abc@gmail.com');
+        element.setValue('email');
     });
 
     it('should fill up password field', () => {
         const element = $('form input[name="password"]');
-        element.setValue('testIT10times');
+        element.setValue('password');
     });
 
     it('should fill up about field', () => {
@@ -68,7 +71,7 @@ describe('Register page', () => {
 
     it('should fill up my goals field', () => {
         const element = $('form textarea[name="goals"]');
-        element.setValue('aet & sleep');
+        element.setValue('eat & sleep');
     });
 
     it('should chose from dropdown box English level', () => {
