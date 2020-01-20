@@ -1,7 +1,7 @@
 Написать 
 
-// Login       -> testit10times@gmail.com
-// Password    -> testIT10times
+// Login       -> testit10times@gmail.com // admin 
+// Password    -> testIT10times           // admin 
 
 * Requirements testing need to be create. /таблица из лекции Jan 14/
 - `или`
