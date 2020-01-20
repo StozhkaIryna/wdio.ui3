@@ -1,5 +1,8 @@
 Написать 
 
+// Login       -> testit10times@gmail.com
+// Password    -> testIT10times
+
 * Requirements testing need to be create. /таблица из лекции Jan 14/
 - `или`
 * User stories /пишутся вместо Requirements testing/они проще и короче//- create for this project
@@ -10,3 +13,4 @@ https://docs.google.com/spreadsheets/d/133bIiGC9-R8aNFxI_-KWpw0LABr9RKUDeqMP-nOZ
 
 Tables converter:
 https://tableconvert.com/ 
+
