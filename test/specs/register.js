@@ -1,5 +1,5 @@
+// https://stage.pasv.us/user/register
 
-const assert = require('assert');
 const {expect} = require('chai');
 
 const email = Math.random() + '@test.com';
@@ -17,21 +17,35 @@ const user = {
      englishLevel : 'Zero',
 };
 
-const page_register = {
+const pageRegister = {
     title : 'Progress Monitor',
     h1 : 'User Register',
     description: 'Profiles with fictitious or dummy data will be deleted.',
     buttonText: 'Submit'
 };
 
-const page_login = {
+const pageRegisterSelectors = {
+    h1 : 'h1',
+    description : 'p',
+    submitButton : 'form button[type="submit"]',
+    firstNameInput : 'form input[name="firstName"]',
+    lastNameInput : 'form input[name="lastName"]',
+    phoneInput : 'form input[name="phone"]',
+    emailInput : 'form input[name="email"]',
+    passwordInput : 'form input[name="password"]',
+    aboutInput : 'form textarea[name="about"]',
+    goalsInput : 'form textarea[name="goals"]',
+    englishLevelInput : 'form select[name="englishLevel"]',
+};
+
+const pageLogin = {
     title : 'Progress Monitor',
     h1 : 'User Login',
     description : 'Profiles with fictitious or dummy data will be deleted.',
     buttonText : 'Submit',
 };
 
-const page_confirmation = {
+const pageConfirmation = {
     h1 : 'You are a new user',
 };
 
@@ -39,72 +53,72 @@ const page_confirmation = {
     it('should have the right title', () => {
         browser.url(URL_REGISTER);
         const actual = browser.getTitle();
-        const expected = page_register.title;
+        const expected = pageRegister.title;
         expect(actual).equal(expected);
     });
 
     it('should have a correct title', () => {
-        const actual = $('h1').getText();
-        const expected = page_register.h1;
+        const actual = $(pageRegisterSelectors.h1).getText();
+        const expected = pageRegister.h1;
         expect(actual).equal(expected);
     });
 
     it('should have a correct description', () => {
-        const actual = $('p').getText();
-        const expected = page_register.description;
+        const actual = $(pageRegisterSelectors.description).getText();
+        const expected = pageRegister.description;
         expect(actual).equal(expected);
     });
 
     it('should have a correct button text', () => {
-        const actual = $('form button').getText();
-        const expected = page_register.buttonText;
+        const actual = $(pageRegisterSelectors.submitButton).getText();
+        const expected = pageRegister.buttonText;
         expect(actual).equal(expected);
     });
 
     //TO CREATE A NEW USER
 
     it('should fill up first Name field', () => {
-        const element = $('form input[name="firstName"]');
+        const element = $(pageRegisterSelectors.firstNameInput);
         element.setValue(user.firstName);
     });
 
     it('should fill up last Name field', () => {
-        const element = $('form input[name="lastName"]');
+        const element = $(pageRegisterSelectors.lastNameInput);
         element.setValue(user.lastName);
     });
 
     it('should fill up phone field', () => {
-        const element = $('form input[name="phone"]');
+        const element = $(pageRegisterSelectors.phoneInput);
         element.setValue(user.phone);
     });
 
     it('should fill up email field', () => {
-        const element = $('form input[name="email"]');
+        const element = $(pageRegisterSelectors.emailInput);
         element.setValue(user.email);
     });
 
     it('should fill up password field', () => {
-        const element = $('form input[name="password"]');
+        const element = $(pageRegisterSelectors.passwordInput);
         element.setValue(user.password);
     });
 
     it('should fill up about field', () => {
-        const element = $('form textarea[name="about"]');
+        const element = $(pageRegisterSelectors.aboutInput);
         element.setValue(user.about);
     });
 
     it('should fill up my goals field', () => {
-        const element = $('form textarea[name="goals"]');
+        const element = $(pageRegisterSelectors.goalsInput);
         element.setValue(user.goals);
     });
 
     it('should chose from dropdown box English level', () => {
-        const element = $('form select[name="englishLevel"]');
+        const element = $(pageRegisterSelectors.englishLevelInput);
         element.selectByVisibleText(user.englishLevel);
     });
 
     it('should click Submit button', () => {
-        const element = $('form button[type="submit"]');
+        const element = $(pageRegisterSelectors.submitButton);
         element.click();
         browser.pause(2000);
     });
@@ -114,13 +128,13 @@ const page_confirmation = {
     it('should have a correct title', () => {
         browser.url(URL_LOGIN);
         const actual = browser.getTitle();
-        const expected = page_login.title;
+        const expected = pageLogin.title;
         expect(actual).equal(expected);
     });
 
     it('should have a correct text', () => {
         const actual = $('h1').getText();
-        const expected = page_login.h1;
+        const expected = pageLogin.h1;
         expect(actual).equal(expected);
     });
 
@@ -144,7 +158,7 @@ const page_confirmation = {
   describe('Confirmation register page', () => {
     it('should have a correct title', () => {
         const actual = $('h1').getText();
-        const expected = page_confirmation.h1;
+        const expected = pageConfirmation.h1;
         expect(actual).equal(expected);
         browser.pause(2000);
     });
