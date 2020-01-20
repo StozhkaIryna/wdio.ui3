@@ -24,10 +24,6 @@ const page_register = {
     buttonText: 'Submit'
 };
 
-const page_confirmation = {
-    h1 : 'You are a new user',
-};
-
 const page_login = {
     title : 'Progress Monitor',
     h1 : 'User Login',
@@ -35,7 +31,11 @@ const page_login = {
     buttonText : 'Submit',
 };
 
-describe('Register page', () => {
+const page_confirmation = {
+    h1 : 'You are a new user',
+};
+
+  describe('Register page', () => {
     it('should have the right title', () => {
         browser.url(URL_REGISTER);
         const actual = browser.getTitle();
@@ -106,11 +106,11 @@ describe('Register page', () => {
     it('should click Submit button', () => {
         const element = $('form button[type="submit"]');
         element.click();
-        browser.pause(3000);
+        browser.pause(2000);
     });
 });
 
-describe('Login page', () => {
+  describe('Login page', () => {
     it('should have a correct title', () => {
         browser.url(URL_LOGIN);
         const actual = browser.getTitle();
@@ -137,11 +137,11 @@ describe('Login page', () => {
     it('should chose click Login button', () => {
         const element = $('form button[type="submit"]');
         element.click();
-        browser.pause(3000);
+        browser.pause(2000);
     });
 });
 
-    describe('Confirmation register page', () => {
+  describe('Confirmation register page', () => {
     it('should have a correct title', () => {
         const actual = $('h1').getText();
         const expected = page_confirmation.h1;
