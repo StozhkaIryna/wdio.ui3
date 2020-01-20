@@ -1,10 +1,10 @@
-// https://stage.pasv.us/user/register
-
 const {expect} = require('chai');
 
+const HOST = 'https://stage.pasv.us';
+const URL_REGISTER = `${HOST}/user/register`;
+const URL_LOGIN = `${HOST}/user/login`;
+
 const email = Math.random() + '@test.com';
-const URL_REGISTER = 'https://stage.pasv.us/user/register';
-const URL_LOGIN = 'https://stage.pasv.us/user/login';
 
 const user = {
      firstName : 'Test',
