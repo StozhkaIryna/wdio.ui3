@@ -1,31 +1,13 @@
 const {expect} = require('chai');
 
+const { selectors } = require('../selectors');
+
 const HOST = 'https://stage.pasv.us';
 const LOGIN = `${HOST}/user/login`;
 
 const admin = {
   email: 'testit10times@gmail.com',
   password: 'testIT10times'
-};
-
-const selectors = {
-  title : 'title',
-  h1 : 'h1',
-  submitButton : 'form button[type="submit"]',
-  emailInput : 'form input[name="email"]',
-  passwordInput: 'form input[name="password"]',
-  diaryLink: '[qa="diary-link"]',
-  userPageH1: '//h1',
-  createDayRepButton: '//a[@class=\'btn btn-secondary\']',
-  checkBox: {
-    help: '//input[@id=\'input-0\']',
-    lectures: '//input[@id=\'input-3\']',
-    recruiter: '//input[@id=\'input-8\']'
-  },
-  moralDropDown: '//select[@name=\'morale\']',
-  hours: '//input[@name=\'hours\']',
-  description: '//textarea[@name=\'description\']',
-  reportConfirm: '//div[@class=\'container\']//div[3]//div[2]'
 };
 
 
@@ -105,7 +87,7 @@ describe('Testing Day Report Create process', () => {
 
   it('should fill up description field with details', () => {
     const element = $(selectors.description);
-    element.setValue('testing '.repeat(18));
+    element.setValue('testing_'.repeat(18));
     browser.pause(2000);
   });
 
@@ -116,7 +98,7 @@ describe('Testing Day Report Create process', () => {
 
   it ('should have fresh created report on the page', () => {
     const actual = $(selectors.reportConfirm).getText();
-    const expected = 'testing '.repeat(18);
+    const expected = 'testing_'.repeat(18);
     expect(actual).equal(expected);
   });
   it('should create Day Report button  exist', () => {
