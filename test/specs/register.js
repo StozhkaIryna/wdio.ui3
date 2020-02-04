@@ -155,4 +155,5 @@ describe('Confirmation register page', () => {
     expect(actual).equal(expected);
     browser.pause(2000);
   });
+
 });
