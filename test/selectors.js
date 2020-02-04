@@ -6,8 +6,10 @@ const selectors = {
   emailInput : 'form input[name="email"]',
   passwordInput: 'form input[name="password"]',
   diaryLink: '[qa="diary-link"]',
+  courseLink: '//a[contains(text(),\'Courses\')]',
   userPageH1: '//h1',
   createDayRepButton: '//a[@class=\'btn btn-secondary\']',
+  createNewCourseButton: '//a[@class=\'btn btn-primary\']',
   checkBox: {
     help: '//input[@id=\'input-0\']',
     lectures: '//input[@id=\'input-3\']',
@@ -16,7 +18,8 @@ const selectors = {
   moralDropDown: '//select[@name=\'morale\']',
   hours: '//input[@name=\'hours\']',
   description: '//textarea[@name=\'description\']',
-  reportConfirm: '//div[@class=\'container\']//div[3]//div[2]'
+  reportConfirm: '//div[@class=\'container\']//div[3]//div[2]',
+  courseNameBox: '//input[@name=\'name\']'
 };
 
 
