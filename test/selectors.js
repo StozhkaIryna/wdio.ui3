@@ -35,7 +35,8 @@ const pageRegisterSelectors = {
   passwordInput : 'form input[name="password"]',
   aboutInput : 'form textarea[name="about"]',
   goalsInput : 'form textarea[name="goals"]',
-  englishLevelInput : 'form select[name="englishLevel"]',
+  englishLevelInput : 'form select[name="englishLevel"]'
+
 };
 
 module.exports = { pageRegisterSelectors, selectors };
