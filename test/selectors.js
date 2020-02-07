@@ -24,6 +24,7 @@ const selectors = {
 };
 
 
+
 const pageRegisterSelectors = {
   h1 : 'h1',
   description : 'p',
