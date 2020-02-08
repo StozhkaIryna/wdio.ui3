@@ -20,12 +20,7 @@ const selectors = {
   description: '//textarea[@name=\'description\']',
   reportConfirm: '//div[@class=\'container\']//div[3]//div[2]',
   courseNameBox: '//input[@name=\'name\']'
-
 };
-
-
-
-
 
 const pageRegisterSelectors = {
   h1 : 'h1',
