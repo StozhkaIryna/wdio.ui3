@@ -19,6 +19,8 @@ const user = {
   englishLevel : 'Zero',
 };
 
+
+
 const pageRegister = {
   title : 'Progress Monitor',
   h1 : 'User Register',
