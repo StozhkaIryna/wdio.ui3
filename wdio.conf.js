@@ -130,6 +130,7 @@ exports.config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
+        compilers: ['js:@babel/register'],
         timeout: 60000
     },
     //
